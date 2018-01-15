@@ -1,0 +1,51 @@
+<div class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      Sample Template With Angular
+    </a>
+
+    <button class="button navbar-burger" (click)="toggleNav = !toggleNav" [ngClass]="{ 'is-active': toggleNav }">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="navbar-menu" [ngClass]="{ 'is-active': toggleNav }">
+    <div class="navbar-end">
+
+      <a routerLink="/" class="nav-item r-item">Home</a>
+      <a class="nav-item r-item">About</a>
+      <a class="nav-item r-item">Features</a>
+      <a routerLink="/faq" class="nav-item r-item">FAQ</a>
+
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="button is-primary">
+              <span class="icon">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+              </span>
+              <span>Join Now</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer class="footer is-primary">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <p>And this right here is a spiffy footer, where you can put stuff.</p>
+        </div>
+        <div class="column has-text-right">
+          <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="icon" href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
