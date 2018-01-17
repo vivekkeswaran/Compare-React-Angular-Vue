@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { GetFaqInfoService } from '../get-faq-info.service';
 
 @Component({
   selector: 'app-faq',
@@ -11,10 +10,10 @@ export class FaqComponent implements OnInit {
 
   faqs: Array<any>;
 
-  constructor(private http:Http) { 
-    this.http.get('http://jsonplaceholder.typicode.com/posts')
-      .map(response => response.json())
-      .subscribe(res => this.faqs = res);
+  constructor(private dataService:GetFaqInfoService) { 
+    this.dataService.getFaqInfo()
+                    .map(response => response.json())
+                    .subscribe(res => this.faqs = res);
   }
 
   ngOnInit() {}

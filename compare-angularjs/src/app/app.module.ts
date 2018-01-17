@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
+import { GetFaqInfoService } from './get-faq-info.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { FaqComponent } from './faq/faq.component';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [],
+  providers: [GetFaqInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
